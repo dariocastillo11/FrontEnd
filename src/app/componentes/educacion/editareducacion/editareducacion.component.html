@@ -1,0 +1,49 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card text-white bg-primary mb-3" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+
+                        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                            <div class="form-group">
+                                <label for="titulo">titulo</label>
+                                <input type="text" class="form-control" id="titulo" name="titulo"
+                                    [(ngModel)]="eduLab.titulo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="imagenestudio">Institucion</label>
+                                <input type="text" class="form-control" id="imagenestudio" name="imagenestudio"
+                                    [(ngModel)]="eduLab.imagenestudio">
+                            </div>
+                            <div class="form-group">
+                                <label for="inicio">inicio</label>
+                                <input type="text" class="form-control" id="inicio" name="inicio"
+                                    [(ngModel)]="eduLab.inicio">
+                            </div>
+                            <div class="form-group">
+                                <label for="fin">fin</label>
+                                <input type="text" class="form-control" id="fin" name="fin" [(ngModel)]="eduLab.fin">
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">comentario</label>
+                                <input type="text" class="form-control" id="descripcion" name="descripcion"
+                                    [(ngModel)]="eduLab.descripcion">
+                            </div>
+                            <div class="form-group">
+                                <label for="urlimagen">pagina</label>
+                                <input type="text" class="form-control" id="urlimagen" name="urlimagen"
+                                    [(ngModel)]="eduLab.urlimagen">
+                            </div>
+                            <button class="btn btn-primary">
+                                Agregar educacion
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

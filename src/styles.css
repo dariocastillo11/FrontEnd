@@ -1,0 +1,22 @@
+
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    text-align: center;
+    
+}
+
+h3{
+    color:rgb(33, 55, 202);
+}
+a:hover{
+    background-color: rgb(246, 202, 107);
+}
+
+
+h2{
+    text-align: center;
+
+}
+.div{
+    text-align: center;
+}

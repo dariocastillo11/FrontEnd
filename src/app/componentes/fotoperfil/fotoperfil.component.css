@@ -1,0 +1,38 @@
+.fotoperfil{
+    width:200px;
+    height:200px;
+    border-radius:150px;
+    border-color: #35b5d8;
+    border-width: 5px;
+    border-style: solid;
+}
+p{
+    line-height: 0.9;
+    font-size: 0.5;
+    font-style:italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    
+}
+h1{
+    line-height: 0.8;
+    font-size: 0.5cm;
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(0, 0, 0);
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(30, 213, 234, 0.5),
+             4px 4px 5px rgba(28, 149, 220, 0.7),
+             0px 0px 7px rgb(229, 229, 229);
+}
+a{
+    color: #466ce7;
+}
+.edicion{
+    width: 30px;
+    height: 30px;
+}
+button:hover{
+    background-color: yellow;
+    color: yellow;
+}

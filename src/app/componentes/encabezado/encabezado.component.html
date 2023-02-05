@@ -1,0 +1,45 @@
+<div class="alert alert-danger" role="alert">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-evenly">
+            <div class="col-auto">
+                <img src="../../../assets/imagen/arg programa.png" alt="ss" width="300" height="49">
+            </div>
+            <!-- link de acceso rapido en la misma pagina-->
+            <div class="col-auto"><a href="#Experiencia" id="acercade"><button type="button"
+                        class="btn btn-primary">Experiencia</button> </a>
+                <a href="#Educacion" id="acercade"><button type="button" class="btn btn-primary">Educacion</button> </a>
+                <a href="#Habilidades" id="acercade"><button type="button" class="btn btn-primary">Habilidades</button>
+                </a>
+                <a href="#Perfil" id="acercade"><button type="button" class="btn btn-primary">Perfil</button> </a>
+
+                <a href="#Proyectos" id="acercade"><button type="button" class="btn btn-primary">Proyectos</button>
+                </a><br><br>
+            </div>
+
+
+            <div class="col-auto" >
+                <a href="https://www.facebook.com/" class="fa-face">
+                    <button type="button" class="btn btn-light">
+                        <i class="bi bi-facebook"></i></button>
+                </a>
+                <a href="https://www.instagram.com/" class="fa-insta">
+                    <button type="button" class="btn btn-light">
+                        <i class="bi bi-instagram"></i></button>
+                </a>
+                <a href="https://www.linkedin.com/in/dar%C3%ADo-castillo-b43387236/" class="fa-linkedin">
+                    <button type="button" class="btn btn-light">
+                        <i class="bi bi-linkedin"></i></button>
+                </a>
+                <a href="https://wa.me/543517665098" class="fa-linkedin">
+                    <button type="button" class="btn btn-light">
+                        <i class="bi bi-whatsapp"></i></button>
+                </a>
+                <button type="button" class="btn btn-light" (click)="login()" *ngIf="!isLogged"><i
+                        class="bi bi-person-fill-slash">ingresar</i></button>
+                <button type="button" class="btn btn-light" (click)="onLogOut()" *ngIf="isLogged"><i
+                        class="bi bi-person-circle">cerrar</i></button>
+            </div>
+
+        </div>
+
+    </div>

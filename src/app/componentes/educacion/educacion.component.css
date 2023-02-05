@@ -1,0 +1,38 @@
+button:hover{
+    background-color: yellow;
+    color: yellow;
+}
+.as{
+    border:5px solid rgb(12, 11, 20);
+    border-radius:22px;
+    margin: 5px;
+    padding: 10px;
+    max-width: 250px;
+    max-height: 400px;
+    text-align: center;
+    contain:paint;
+}
+h1{
+    line-height: 0.9;
+    font-size: 0.5;
+    font-style:italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(70, 56, 162);
+    
+}
+h2{
+    line-height: 0.9;
+    font-size: 0.5;
+
+    font-family: 'Times New Roman';
+    color: rgb(77, 156, 195);
+    
+}
+p{
+    line-height: 0.9;
+    font-size: 0.5;
+    font-style:italic;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    
+}

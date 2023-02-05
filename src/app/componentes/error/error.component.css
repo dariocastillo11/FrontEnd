@@ -1,0 +1,47 @@
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #11cb4f;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgb(213, 78, 20), rgb(218, 218, 43));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right,rgb(220, 41, 25), rgb(224, 172, 29));
+
+  width: 100%;
+  height: 100%;
+}
+
+button:hover {
+  background-color: yellow;
+  color: yellow;
+}
+
+h1{
+  line-height: 4cm;
+  font-size: 4.5cm;
+
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color:rgb(170, 18, 18);
+  text-shadow: -1px -1px 1px rgba(16, 197, 13, 0.668),
+           0px 4px 1px rgb(247, 238, 4),
+           4px 4px 5px rgb(227, 227, 12),
+           0px 0px 7px rgb(245, 233, 9);
+  
+}
+
+p{
+  line-height: 1cm;
+  font-size: 1cm;
+  font-style:italic;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: -1px -1px 1px rgba(16, 197, 13, 0.668),
+  0px 4px 1px rgb(247, 238, 4),
+  4px 4px 5px rgb(227, 227, 12),
+  0px 0px 7px rgb(245, 233, 9);
+  
+}
+.card{
+  background: #0c0f0f;
+
+}

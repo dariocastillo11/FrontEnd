@@ -1,0 +1,52 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card text-white bg-primary mb-3" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                            <div class="form-group">
+                                <label for="nombreempresa">Nombre de la empresa</label>
+                                <input type="text" class="form-control" id="nombreempresa" name="nombreempresa"
+                                    [(ngModel)]="expLab.nombreempresa" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="esTrabajoactual">Es trabajo actual?</label>
+                                <input type="text" class="form-control" id="esTrabajoactual" name="esTrabajoactual"
+                                    [(ngModel)]="expLab.esTrabajoactual">
+                            </div>
+                            <div class="form-group">
+                                <label for="fechainicio">Fecha inicio</label>
+                                <input type="text" class="form-control" id="fechainicio" name="fechafin"
+                                    [(ngModel)]="expLab.fechainicio">
+                            </div>
+                            <div class="form-group">
+                                <label for="fechafin">fecha fin</label>
+                                <input type="text" class="form-control" id="fechafin" name="fechafin"
+                                    [(ngModel)]="expLab.fechafin">
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">descripcion</label>
+                                <input type="text" class="form-control" id="descripcion" name="descripcion"
+                                    [(ngModel)]="expLab.descripcion">
+                            </div>
+                            <div class="form-group">
+                                <label for="urlempresa">url empresa</label>
+                                <input type="text" class="form-control" id="urlempresa" name="urlempresa"
+                                    [(ngModel)]="expLab.urlempresa">
+                            </div>
+                            <div class="form-group">
+                                <label for="urlimagenempresa">url imagen empresa </label>
+                                <input type="text" class="form-control" id="urlimagenempresa" name="urlimagenempresa"
+                                    [(ngModel)]="expLab.urlimagenempresa">
+                            </div>
+                            <button class="btn btn-primary">
+                                Agregar experiencia
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

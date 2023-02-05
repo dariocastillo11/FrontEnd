@@ -1,0 +1,30 @@
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(237, 231, 231);
+    text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(28, 151, 151, 0.5),
+             4px 4px 5px rgba(32, 72, 107, 0.7),
+             0px 0px 7px rgb(214, 157, 33);
+        
+
+
+}
+.carousel-item img {
+
+    min-height: auto;
+    max-height: 360px;
+    min-width: 100px;
+    max-width: 1350px;
+
+
+}
+
+.carousel-item{
+ height: auto px;
+
+}
+
+
+
+

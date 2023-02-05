@@ -1,0 +1,13 @@
+button:hover{
+    background-color: yellow;
+    color: yellow;
+}
+#tituloedit{
+    margin-left: 5%;
+}
+#margenimagenes{
+    margin-top: 5%;
+    margin-left: 5%;
+    width:250px;
+    height: 200px;
+}

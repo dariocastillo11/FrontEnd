@@ -1,0 +1,38 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card text-white bg-primary mb-3" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group">
+                                <label for="nombre">nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombreempresa"
+                                    [(ngModel)]="nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">descripcion</label>
+                                <input type="text" class="form-control" id="descripcion" name="descripcion"
+                                    [(ngModel)]="descripcion" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tecnologias">tecnologias</label>
+                                <input type="text" class="form-control" id="tecnologias" name="tecnologias"
+                                    [(ngModel)]="tecnologias" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="urlimagen">urlimagen</label>
+                                <input type="text" class="form-control" id="urlimagen" name="urlimagen"
+                                    [(ngModel)]="urlimagen" required>
+                            </div>
+                            <button class="btn btn-primary">
+                                Agregar Proyecto
+
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

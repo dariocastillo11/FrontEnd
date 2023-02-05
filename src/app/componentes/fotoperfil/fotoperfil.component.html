@@ -1,0 +1,36 @@
+<div class="alert alert-danger" role="alert">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <a href="#acercade" id="Perfil">
+                    <i class="bi bi-arrow-up-left-square-fill"></i>
+                </a>
+            </div>
+            <div class="col-auto">
+                <h2>Acerca de mi:</h2>
+            </div>
+            <div class="col-1">
+            </div>
+        </div>
+        <!-- perfil-->
+        <div class="row d-flex justify-content-evenly" *ngFor="let per of persona">
+            <p>-------------------------------------------------------------------------------</p>
+            <div class="row d-flex justify-content-evenly">
+                <div class="col-auto" style="min-width: 400px;">
+                    <img [src]='per.urlfoto' alt="" class="fotoperfil">
+                    <p>{{per.fechanacimiento}}</p>
+                    <p>{{per.domicilio}}</p>
+                </div>
+                <div class="col">
+                    <h4>{{per.nombre}}{{per.apellido}}</h4><br>
+                    <h1>{{per.sobremi}}</h1>
+                </div>
+                <div class="col-auto">
+                    <button routerLink='/editarfotoperfil/{{per.id}}' *ngIf="isLogged">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
