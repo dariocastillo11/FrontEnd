@@ -8,7 +8,7 @@ import { proyectos } from '../model/proyectos.model';
     providedIn: 'root'
   })
   export class ProyectosService {
-    URL = 'neutral-shirleen-dariocastillo11.koyeb.app/proyectos/' ;
+    URL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/proyectos/' ;
   
     constructor(private httpClient: HttpClient) { }  
   //lista

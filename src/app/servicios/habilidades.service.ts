@@ -7,7 +7,7 @@ import { habilidades } from '../model/habilidades.model';
   providedIn: 'root'
 })
 export class HabilidadesService {
-  URL = 'neutral-shirleen-dariocastillo11.koyeb.app/habilidades/' ;
+  URL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/habilidades/' ;
 
   constructor(private httpClient: HttpClient) { }  
 //lista
