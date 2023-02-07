@@ -20,10 +20,12 @@
                     <img [src]='per.urlfoto' alt="" class="fotoperfil">
                     <p>{{per.fechanacimiento}}</p>
                     <p>{{per.domicilio}}</p>
+                   <p> mail:<b> dario.castillo@mi.unc.edu.ar</b></p>
                 </div>
                 <div class="col">
                     <h4>{{per.nombre}}{{per.apellido}}</h4><br>
                     <h1>{{per.sobremi}}</h1>
+                    
                 </div>
                 <div class="col-auto">
                     <button routerLink='/editarfotoperfil/{{per.id}}' *ngIf="isLogged">
