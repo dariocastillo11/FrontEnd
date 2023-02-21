@@ -1,81 +1,63 @@
-<section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card text-white bg-primary mb-3" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center">
+<div class="vh-100 gradient-custom">
+    <div class="arriba">
 
-                        <div class="login">
-                            <div class="arriba">
-                                <div class="cerrar">
-                                    <div class="container-boton"><i
-                                            class="bi bi-arrow-up-left-square-fill"></i></div>
-                                </div>
-                                <div class="abc">
-                                    <h3 class="tittle"><mark>Iniciar Sesion</mark></h3>
-                                </div>
-                            </div>
-                            <div class="form">
-                                <form [formGroup]="form" #f="ngForm" (ngSubmit)="onSignUp()" novalidate>
-                                    <div class="label-container">
-                                        <label>Nombre:</label>
-                                    </div>
-                                    <div class="input-container">
-                                        <input id="name" name="name" [(ngModel)]="name" required formControlName="name"
-                                            type="text"
-                                            [ngClass]="{'is-invalid' : Name?.errors && Name?.touched, 'is-valid': !Name?.errors && Name?.touched}">
-                                    </div>
-                                    <div *ngIf="Name?.errors && Name?.touched">
-                                        <p *ngIf="Name?.hasError('required')" style="color: red;">El nombre es requerido
-                                        </p>
-                                    </div>
-                                    <div class="label-container">
-                                        <label>Email:</label>
-                                    </div>
-                                    <div class="input-container">
-                                        <input id="email" name="email" [(ngModel)]="email" required
-                                            formControlName="email" type="email"
-                                            [ngClass]="{'is-invalid' : Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
-                                    </div>
-                                    <div *ngIf="Email?.errors && Email?.touched">
-                                        <p *ngIf="Email?.hasError('required')" style="color: red;">El email es requerido
-                                        </p>
-                                        <p *ngIf="Email?.hasError('email')" style="color: red;">Debe ingresar un email
-                                            valido</p>
-                                    </div>
-                                    <div class="label-container">
-                                        <label>Usuario:</label>
-                                    </div>
-                                    <div class="input-container">
-                                        <input id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario"
-                                            required formControlName="username" type="text"
-                                            [ngClass]="{'is-invalid' : Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
-                                    </div>
-                                    <div *ngIf="Username?.errors && Username?.touched">
-                                        <p *ngIf="Username?.hasError('required')" style="color: red;">El usuario es
-                                            requerido</p>
-                                    </div>
-                                    <div class="label-container"><label>Contraseña:</label>
-                                    </div>
-                                    <div class="input-container">
-                                        <input id="password" name="password" [(ngModel)]="password" required
-                                            formControlName="password" type="password"
-                                            [ngClass]="{'is-invalid' : Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
-                                    </div>
-                                    <div *ngIf="Password?.errors && Password?.touched">
-                                        <p *ngIf="Password?.hasError('required')" style="color: red;">La contraseña es
-                                            requerida</p>
-                                        <p *ngIf="form.controls['password'].hasError('minlength')" style="color: red;">
-                                            La contraseña debe ser de 4 o mas caracteres</p>
-                                    </div>
-                                    <div class="submit-container"><input id="submit" type="submit"></div>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="abc">
+            <h3 class="tittle"><mark>Iniciar Sesion</mark></h3>
         </div>
     </div>
-</section>
+    <div class="form">
+        <form [formGroup]="form" #f="ngForm" (ngSubmit)="onSignUp()" novalidate>
+            <div class="label-container">
+                <label>Nombre:</label>
+            </div>
+            <div class="input-container">
+                <input id="name" name="name" [(ngModel)]="name" required formControlName="name" type="text"
+                    [ngClass]="{'is-invalid' : Name?.errors && Name?.touched, 'is-valid': !Name?.errors && Name?.touched}">
+            </div>
+            <div *ngIf="Name?.errors && Name?.touched">
+                <p *ngIf="Name?.hasError('required')" style="color: red;">El nombre es requerido
+                </p>
+            </div>
+            <div class="label-container">
+                <label>Email:</label>
+            </div>
+            <div class="input-container">
+                <input id="email" name="email" [(ngModel)]="email" required formControlName="email" type="email"
+                    [ngClass]="{'is-invalid' : Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
+            </div>
+            <div *ngIf="Email?.errors && Email?.touched">
+                <p *ngIf="Email?.hasError('required')" style="color: red;">El email es requerido
+                </p>
+                <p *ngIf="Email?.hasError('email')" style="color: red;">Debe ingresar un email
+                    valido</p>
+            </div>
+            <div class="label-container">
+                <label>Usuario:</label>
+            </div>
+            <div class="input-container">
+                <input id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required
+                    formControlName="username" type="text"
+                    [ngClass]="{'is-invalid' : Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
+            </div>
+            <div *ngIf="Username?.errors && Username?.touched">
+                <p *ngIf="Username?.hasError('required')" style="color: red;">El usuario es
+                    requerido</p>
+            </div>
+            <div class="label-container"><label>Contraseña:</label>
+            </div>
+            <div class="input-container">
+                <input id="password" name="password" [(ngModel)]="password" required formControlName="password"
+                    type="password"
+                    [ngClass]="{'is-invalid' : Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
+            </div>
+            <div *ngIf="Password?.errors && Password?.touched">
+                <p *ngIf="Password?.hasError('required')" style="color: red;">La contraseña es
+                    requerida</p>
+                <p *ngIf="form.controls['password'].hasError('minlength')" style="color: red;">
+                    La contraseña debe ser de 4 o mas caracteres</p>
+            </div>
+            <div class="submit-container"><input id="submit" type="submit"></div>
+        </form>
+
+    </div>
+</div>
