@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { habilidades } from '../model/habilidades.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HabilidadesService {
-  URL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/habilidades/' ;
+  URL = environment.URL + '/habilidades/';
 
   constructor(private httpClient: HttpClient) { }  
 //lista

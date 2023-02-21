@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { educacion } from '../model/educacion.model'
 
 
@@ -8,8 +9,9 @@ import { educacion } from '../model/educacion.model'
   providedIn: 'root'
 })
 export class EducacionService {
+ 
+  URL = environment.URL + '/educacion/';
   
-  URL =  'https://neutral-shirleen-dariocastillo11.koyeb.app/educacion/';
 
   constructor(private httpClient: HttpClient) { }  
 //lista
