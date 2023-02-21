@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { experiencia } from 'src/app/model/experiencia.model';
 import { TokenService } from 'src/app/servicios/token.service';
 import { ExperienciaService } from '../../servicios/experiencia.service';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-experiencia',
@@ -10,8 +12,10 @@ import { ExperienciaService } from '../../servicios/experiencia.service';
 })
 export class ExperienciaComponent implements OnInit{
   experiencia: experiencia[] = [];
+  submitted: boolean;
+  registerForm: any;
 
-  constructor(private ExperienciaService: ExperienciaService, private tokenService: TokenService){}
+  constructor(private ExperienciaService: ExperienciaService, private tokenService: TokenService,private modalService: NgbModal, router: Router){}
 isLogged=false;
 
 
@@ -51,6 +55,27 @@ isLogged=false;
 
   }
 
+  modal : NgbModalRef;
+
+  open(content: any, id?:number) {
+    this.modal = this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' })
+    
+    this.modal.result.then((e) => {
+        console.log("dialogo cerrado")
+    });        
+  }
+
+  cerrar() {
+    this.modal.close();
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    if (this.registerForm.invalid) {
+      return;
+    }
+    alert('SUCCESS!! :-)');
+  }
 
 }
 

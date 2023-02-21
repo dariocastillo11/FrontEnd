@@ -20,17 +20,16 @@
                     <img [src]='per.urlfoto' alt="" class="fotoperfil">
                     <p>{{per.fechanacimiento}}</p>
                     <p>{{per.domicilio}}</p>
-                   <p> mail:<b> dario.castillo@mi.unc.edu.ar</b></p>
                 </div>
                 <div class="col">
                     <h4>{{per.nombre}}{{per.apellido}}</h4><br>
                     <h1>{{per.sobremi}}</h1>
-                    
                 </div>
                 <div class="col-auto">
-                    <button routerLink='/editarfotoperfil/{{per.id}}' *ngIf="isLogged">
-                        <i class="bi bi-pencil-square"></i>
-                    </button>
+                    <button (click)="open(content, per.id)" *ngIf="isLogged"><i
+                            class="bi bi-pencil-square"></i><ng-template #content let-modal>
+                            <app-editarfotoperfil [ide]="per.id"></app-editarfotoperfil>
+                        </ng-template></button>
                 </div>
             </div>
         </div>

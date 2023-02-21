@@ -29,10 +29,14 @@ onCreate():void{
     {
       next: resp => {
       alert("Persona añadida");
-      this.router.navigate(['']);
+      //this.router.navigate(['']);
+      window.location.reload();
+
     },error: err => {
       alert("Fallo");
-      this.router.navigate(['']);
+      //this.router.navigate(['']);
+      window.location.reload();
+
     }
     }
     

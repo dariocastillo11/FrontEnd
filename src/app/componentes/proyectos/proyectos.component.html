@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row d-flex justify-content-evenly">
             <div class="col-auto">
-                <a href="#acercade" id="Proyectos">
+                <a href='#acercade' id='Proyectos'>
                     <i class="bi bi-arrow-up-left-square-fill"></i>
                 </a>
             </div>
@@ -10,9 +10,10 @@
                 <h2>Proyectos</h2>
             </div>
             <div class="col-auto">
-                <button type="button" routerLink="/nuevopro" *ngIf="isLogged">
-                    <i class="bi bi-plus-square"></i>
-                </button>
+                <button (click)="open(content)" *ngIf="isLogged"><i class="bi bi-plus-square"></i><ng-template #content
+                        let-modal>
+                        <app-new-proyectos></app-new-proyectos>
+                    </ng-template></button>
             </div>
 
             <!-- experienciass-->
@@ -32,8 +33,12 @@
                 </div>
 
                 <div class="col-auto">
-                    <button routerLink="/editarproyectos/{{pro.id}}" *ngIf="isLogged"><i
-                            class="bi bi-pencil-square"></i></button>
+                    
+
+                    <button (click)="open(content, pro.id)" *ngIf="isLogged"><i
+                            class="bi bi-pencil-square"></i><ng-template #content let-modal>
+                            <app-editarproyectos [idess]="pro.id"></app-editarproyectos>
+                        </ng-template></button>
                     <button (click)="delete(pro.id)" *ngIf="isLogged"><i class="bi bi-trash3"></i></button>
 
                 </div>

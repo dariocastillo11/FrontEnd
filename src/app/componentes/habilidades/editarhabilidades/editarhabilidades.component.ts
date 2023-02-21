@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ThisReceiver } from '@angular/compiler';
 import { ActivatedRoute } from '@angular/router';
 import { habilidades } from 'src/app/model/habilidades.model';
@@ -13,20 +13,23 @@ import { HabilidadesComponent } from '../habilidades.component';
   styleUrls: ['./editarhabilidades.component.css']
 })
 export class EditarhabilidadesComponent implements OnInit{
+  @Input() ide:number;
   habLab : habilidades = null;
   constructor(private habilidadesService: HabilidadesService, private activatedRouter: ActivatedRoute,
     private router:Router){
 
   }
 ngOnInit(): void{
-  const id= this.activatedRouter.snapshot.params['id'];
-  this.habilidadesService.detail(id).subscribe(
+ // const id= this.activatedRouter.snapshot.params['id'];
+  this.habilidadesService.detail(this.ide).subscribe(
     {
      next: data =>{
       this.habLab=data;
     },error: err =>{
       alert("ERROR AL MODIFICAR HABILIDAD");
-      this.router.navigate(['']);
+      //this.router.navigate(['']);
+      window.location.reload();
+
     }
   }
    
@@ -34,13 +37,17 @@ ngOnInit(): void{
 
 }
 onUpdate():void{
-  const id= this.activatedRouter.snapshot.params['id'];
-  this.habilidadesService.update(id,this.habLab).subscribe({
+  //const id= this.activatedRouter.snapshot.params['id'];
+  this.habilidadesService.update(this.ide,this.habLab).subscribe({
     next: data => {
-      this.router.navigate([''])
+      //this.router.navigate([''])
+      window.location.reload();
+
     },error: err =>{
       alert("ERROR AL MODIFICAR HABILIDAD");
-      this.router.navigate(['']);
+      //this.router.navigate(['']);
+      window.location.reload();
+
     }
   }
     

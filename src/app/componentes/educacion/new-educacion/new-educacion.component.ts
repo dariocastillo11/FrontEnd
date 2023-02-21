@@ -30,10 +30,14 @@ export class NewEducacionComponent {
       {
         next: resp => {
         alert("Educacion añadida");
-        this.router.navigate(['']);
+        //this.router.navigate(['']);
+        window.location.reload();
+
       },error: err => {
         alert("Fallo");
-        this.router.navigate(['']);
+        //this.router.navigate(['']);
+        window.location.reload();
+
       }
       }
       

@@ -1,5 +1,5 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { experiencia } from '../../../model/experiencia.model';
 import { ExperienciaService } from '../../../servicios/experiencia.service';
@@ -12,20 +12,25 @@ import {ExperienciaComponent } from '../../experiencia/experiencia.component';
   styleUrls: ['./editarexperiencia.component.css']
 })
 export class EditarexperienciaComponent implements OnInit{
+
+  @Input() ide:number;
+
   expLab : experiencia = null;
   constructor(private experienciaService: ExperienciaService, private activatedRouter: ActivatedRoute,
     private router:Router){
 
   }
 ngOnInit(): void{
-  const id= this.activatedRouter.snapshot.params['id'];
-  this.experienciaService.detail(id).subscribe(
+  //const id= this.activatedRouter.snapshot.params['id'];
+  this.experienciaService.detail(this.ide).subscribe(
     {
      next: data =>{
       this.expLab=data;
     },error: err =>{
       alert("ERROR AL MODIFICAR EXPERIENCIA");
-      this.router.navigate(['']);
+      //this.router.navigate(['']);
+      window.location.reload();
+
     }
   }
    
@@ -33,13 +38,17 @@ ngOnInit(): void{
 
 }
 onUpdate():void{
-  const id= this.activatedRouter.snapshot.params['id'];
-  this.experienciaService.update(id,this.expLab).subscribe({
+  //const id= this.activatedRouter.snapshot.params['id'];
+  this.experienciaService.update(this.ide,this.expLab).subscribe({
     next: data => {
-      this.router.navigate([''])
+      //this.router.navigate([''])
+      window.location.reload();
+
     },error: err =>{
       alert("ERROR AL MODIFICAR EXPERIENCIA");
-      this.router.navigate(['']);
+      //this.router.navigate(['']);
+      window.location.reload();
+
     }
   }
     
