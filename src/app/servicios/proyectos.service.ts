@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { proyectos } from '../model/proyectos.model';
 
 
@@ -9,7 +8,7 @@ import { proyectos } from '../model/proyectos.model';
     providedIn: 'root'
   })
   export class ProyectosService {
-    URL = environment.URL + '/proyectos/';
+    URL = 'neutral-shirleen-dariocastillo11.koyeb.app/proyectos/';
 
     constructor(private httpClient: HttpClient) { }  
   //lista
