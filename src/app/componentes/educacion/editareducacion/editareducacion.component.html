@@ -2,34 +2,34 @@
 
 
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="form-group">
-            <label for="titulo">titulo</label>
+        <div class="form-group a">
+            <label for="titulo">Título</label>
             <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="eduLab.titulo" required>
         </div>
-        <div class="form-group">
-            <label for="imagenestudio">Institucion</label>
+        <div class="form-group a">
+            <label for="imagenestudio">Institución</label>
             <input type="text" class="form-control" id="imagenestudio" name="imagenestudio"
                 [(ngModel)]="eduLab.imagenestudio">
         </div>
-        <div class="form-group">
-            <label for="inicio">inicio</label>
+        <div class="form-group a">
+            <label for="inicio">Inicio</label>
             <input type="text" class="form-control" id="inicio" name="inicio" [(ngModel)]="eduLab.inicio">
         </div>
-        <div class="form-group">
-            <label for="fin">fin</label>
+        <div class="form-group a">
+            <label for="fin">Fin</label>
             <input type="text" class="form-control" id="fin" name="fin" [(ngModel)]="eduLab.fin">
         </div>
-        <div class="form-group">
-            <label for="descripcion">comentario</label>
+        <div class="form-group a">
+            <label for="descripcion">Comentario</label>
             <input type="text" class="form-control" id="descripcion" name="descripcion"
                 [(ngModel)]="eduLab.descripcion">
         </div>
-        <div class="form-group">
-            <label for="urlimagen">pagina</label>
+        <div class="form-group a">
+            <label for="urlimagen">Página</label>
             <input type="text" class="form-control" id="urlimagen" name="urlimagen" [(ngModel)]="eduLab.urlimagen">
         </div>
         <button class="btn btn-primary">
-            Agregar educacion
+            Guardar cambios
         </button>
     </form>
 

@@ -8,7 +8,19 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(to right, rgba(106, 17, 203, 1), rgb(54, 15, 15));
 
-  max-height: 500px;
+  max-height: 435px;
+  border-radius: 15px;
+  border: #6a11cb solid 2px;
+  }
+  input{
+    width: 80%;
+    height: 10%;
+  }
+  .a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }button:hover{
     background-color: yellow;
     color: yellow;

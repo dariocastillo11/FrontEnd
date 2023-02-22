@@ -1,35 +1,35 @@
 <div class="vh-100 gradient-custom">
 
     <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-        <div class="form-group">
-            <label for="titulo">Titulo</label>
-            <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>
+        <div class="form-group a">
+            <label for="titulo">Título</label>
+            <input placeholder="Nombre de titulo, diploma, certificado" type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="titulo" required>
         </div>
-        <div class="form-group">
-            <label for="imagenestudio">Institucion</label>
-            <input type="text" class="form-control" id="imagenestudio" name="imagenestudio" [(ngModel)]="imagenestudio"
+        <div class="form-group a">
+            <label for="imagenestudio">Institución</label>
+            <input placeholder="Ingrese institucion donde realizo la cursada" type="text" class="form-control" id="imagenestudio" name="imagenestudio" [(ngModel)]="imagenestudio"
                 required>
         </div>
-        <div class="form-group">
+        <div class="form-group a">
             <label for="descripcion">Comentario</label>
-            <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion"
+            <input placeholder="Escriba habilidades aprendidas" type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion"
                 required>
         </div>
-        <div class="form-group">
-            <label for="inicio">inicio</label>
-            <input type="text" class="form-control" id="inicio" name="inicio" [(ngModel)]="inicio" required>
+        <div class="form-group a">
+            <label for="inicio">Inicio</label>
+            <input placeholder="Fecha de inicio, ej 20-20-2020" type="text" class="form-control" id="inicio" name="inicio" [(ngModel)]="inicio" required>
         </div>
-        <div class="form-group">
-            <label for="fin">fin</label>
-            <input type="text" class="form-control" id="fin" name="fin" [(ngModel)]="fin" required>
+        <div class="form-group a">
+            <label for="fin">Fin</label>
+            <input placeholder="Fecha de finalizacion. ej 20-20-2023" type="text" class="form-control" id="fin" name="fin" [(ngModel)]="fin" required>
         </div>
-        <div class="form-group">
-            <label for="urlimagen">Pagina</label>
-            <input type="text" class="form-control" id="urlimagen" name="urlimagen" [(ngModel)]="urlimagen" required>
+        <div class="form-group a">
+            <label for="urlimagen">Página</label>
+            <input placeholder="URL de la pagina de la institución" type="text" class="form-control" id="urlimagen" name="urlimagen" [(ngModel)]="urlimagen" required>
         </div>
 
         <button class="btn btn-primary">
-            Agregar educacion
+            Agregar educación
 
         </button>
     </form>

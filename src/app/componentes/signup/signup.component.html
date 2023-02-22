@@ -1,28 +1,28 @@
-<div class="vh-100 gradient-custom">
+<div class=" gradient-custom">
     <div class="arriba">
 
         <div class="abc">
-            <h3 class="tittle"><mark>Iniciar Sesion</mark></h3>
+            <h3 class="tittle"><mark>Crear Usuario</mark></h3>
         </div>
     </div>
     <div class="form">
         <form [formGroup]="form" #f="ngForm" (ngSubmit)="onSignUp()" novalidate>
-            <div class="label-container">
+            <div class="label-container a">
                 <label>Nombre:</label>
             </div>
-            <div class="input-container">
-                <input id="name" name="name" [(ngModel)]="name" required formControlName="name" type="text"
+            <div class="input-container a">
+                <input placeholder="Ingrese su nombre" id="name" name="name" [(ngModel)]="name" required formControlName="name" type="text"
                     [ngClass]="{'is-invalid' : Name?.errors && Name?.touched, 'is-valid': !Name?.errors && Name?.touched}">
             </div>
             <div *ngIf="Name?.errors && Name?.touched">
                 <p *ngIf="Name?.hasError('required')" style="color: red;">El nombre es requerido
                 </p>
             </div>
-            <div class="label-container">
+            <div class="label-container a">
                 <label>Email:</label>
             </div>
-            <div class="input-container">
-                <input id="email" name="email" [(ngModel)]="email" required formControlName="email" type="email"
+            <div class="input-container a">
+                <input placeholder="Ingrese email, ej: hola@hola.com" id="email" name="email" [(ngModel)]="email" required formControlName="email" type="email"
                     [ngClass]="{'is-invalid' : Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}">
             </div>
             <div *ngIf="Email?.errors && Email?.touched">
@@ -31,11 +31,11 @@
                 <p *ngIf="Email?.hasError('email')" style="color: red;">Debe ingresar un email
                     valido</p>
             </div>
-            <div class="label-container">
+            <div class="label-container a">
                 <label>Usuario:</label>
             </div>
-            <div class="input-container">
-                <input id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required
+            <div class="input-container a">
+                <input  placeholder="Ingrese un nombre de usuario" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required
                     formControlName="username" type="text"
                     [ngClass]="{'is-invalid' : Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
             </div>
@@ -43,10 +43,10 @@
                 <p *ngIf="Username?.hasError('required')" style="color: red;">El usuario es
                     requerido</p>
             </div>
-            <div class="label-container"><label>Contraseña:</label>
+            <div class="label-container a"><label>Contraseña:</label>
             </div>
-            <div class="input-container">
-                <input id="password" name="password" [(ngModel)]="password" required formControlName="password"
+            <div class="input-container a">
+                <input  placeholder="Ingrese una contraseña. 4 caracteres minimos" id="password" name="password" [(ngModel)]="password" required formControlName="password"
                     type="password"
                     [ngClass]="{'is-invalid' : Username?.errors && Username?.touched, 'is-valid': !Username?.errors && Username?.touched}">
             </div>
@@ -56,7 +56,7 @@
                 <p *ngIf="form.controls['password'].hasError('minlength')" style="color: red;">
                     La contraseña debe ser de 4 o mas caracteres</p>
             </div>
-            <div class="submit-container"><input id="submit" type="submit"></div>
+            <div class="submit-container a"><input id="submit" type="submit"></div>
         </form>
 
     </div>

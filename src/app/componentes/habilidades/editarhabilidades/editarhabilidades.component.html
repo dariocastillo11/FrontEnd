@@ -1,19 +1,19 @@
 <div class="vh-100 gradient-custom">
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="form-group">
-            <label for="nombre">nombre</label>
+        <div class="form-group a">
+            <label for="nombre">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="habLab.nombre" required>
         </div>
-        <div class="form-group">
-            <label for="porcentaje">porcentaje</label>
+        <div class="form-group a">
+            <label for="porcentaje">Porcentaje</label>
             <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="habLab.porcentaje">
         </div>
-        <div class="form-group">
-            <label for="imagen">imagen</label>
+        <div class="form-group a">
+            <label for="imagen">Imagen</label>
             <input type="text" class="form-control" id="imagen" name="imagen" [(ngModel)]="habLab.imagen">
         </div>
         <button class="btn btn-primary">
-            Agregar habilidad
+            Guardar cambios
         </button>
     </form>
 

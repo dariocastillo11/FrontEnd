@@ -1,4 +1,4 @@
-<div class="alert alert-danger" role="alert">
+<div class="bg-primary p-2 text-dark bg-opacity-10">
     <div class="container">
         <div class="row">
             <div class="col-auto">
@@ -9,7 +9,11 @@
             <div class="col-auto">
                 <h2>Acerca de mi:</h2>
             </div>
-            <div class="col-1">
+            <div class="col-auto">
+                <button (click)="open(content)" *ngIf="isLogged"><i class="bi bi-plus-square"></i><ng-template #content
+                        let-modal>
+                        <app-new-fotoperfil></app-new-fotoperfil>
+                    </ng-template></button>
             </div>
         </div>
         <!-- perfil-->
@@ -30,6 +34,7 @@
                             class="bi bi-pencil-square"></i><ng-template #content let-modal>
                             <app-editarfotoperfil [ide]="per.id"></app-editarfotoperfil>
                         </ng-template></button>
+                        <button (click)='delete(per.id)' *ngIf="isLogged"><i class="bi bi-trash3"></i></button>
                 </div>
             </div>
         </div>

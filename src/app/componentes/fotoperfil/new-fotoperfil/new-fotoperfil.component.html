@@ -1,30 +1,30 @@
-<div class="container">
+<div class="vh-100 gradient-custom">
     <div class="row">
         <div>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombre">nombre</label>
-                    <input type="text" class="form-control" id="nombre"name="nombre"[(ngModel)]="nombre"required>
+                <div class="form-group a">
+                    <label for="nombre">Nombre</label>
+                    <input placeholder="Ingrese su nombre" type="text" class="form-control" id="nombre"name="nombre"[(ngModel)]="nombre"required>
                 </div>
-                <div class="form-group">
-                    <label for="apellido">apellido</label>
-                    <input type="text" class="form-control" id="apellido"name="apellido"[(ngModel)]="apellido"required>
+                <div class="form-group a">
+                    <label for="apellido">Apellido</label>
+                    <input placeholder="Ingrese su apellido" type="text" class="form-control" id="apellido"name="apellido"[(ngModel)]="apellido"required>
                 </div>
-                <div class="form-group">
-                    <label for="fechanacimiento">fechanacimiento</label>
-                    <input type="text" class="form-control" id="fechanacimiento"name="fechanacimiento"[(ngModel)]="fechanacimiento"required>
+                <div class="form-group a">
+                    <label for="fechanacimiento">Fecha nacimiento</label>
+                    <input placeholder="Ingrese su feha de nacimiento" type="text" class="form-control" id="fechanacimiento"name="fechanacimiento"[(ngModel)]="fechanacimiento"required>
                 </div>
-                <div class="form-group">
-                    <label for="domicilio">domicilio</label>
-                    <input type="text" class="form-control" id="domicilio"name="domicilio"[(ngModel)]="domicilio"required>
+                <div class="form-group a">
+                    <label for="domicilio">Domicilio</label>
+                    <input placeholder="Ingrese su domicilio" type="text" class="form-control" id="domicilio"name="domicilio"[(ngModel)]="domicilio"required>
                 </div>
-                <div class="form-group">
-                    <label for="sobremi">sobremi</label>
-                    <input type="text" class="form-control" id="sobremi"name="sobremi"[(ngModel)]="sobremi"required>
+                <div class="form-group a">
+                    <label for="sobremi">Sobremi</label>
+                    <input placeholder="Escriba una descripción personal" type="text" class="form-control" id="sobremi"name="sobremi"[(ngModel)]="sobremi"required>
                 </div>
-                <div class="form-group">
-                    <label for="urlfoto">urlfoto</label>
-                    <input type="text" class="form-control" id="urlfoto"name="urlfoto"[(ngModel)]="urlfoto"required>
+                <div class="form-group a">
+                    <label for="urlfoto">Url foto</label>
+                    <input placeholder="Agrega url que contenga su foto de perfil" type="text" class="form-control" id="urlfoto"name="urlfoto"[(ngModel)]="urlfoto"required>
                 </div>
                 <button class="btn btn-primary">
                     Agregar Persona

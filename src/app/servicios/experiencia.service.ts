@@ -8,7 +8,8 @@ import { experiencia } from '../model/experiencia.model';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  URL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/experiencia/' ;
+  //URL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/experiencia/' ;
+  URL = 'http://localhost:8080/experiencia/';
 
 
   constructor(private httpClient: HttpClient) { }  

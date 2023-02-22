@@ -9,7 +9,22 @@
   background: linear-gradient(to right, rgba(106, 17, 203, 1), rgb(54, 15, 15));
 
   max-height: 400px;
-  }button:hover{
+  border-radius: 15px;
+  border: #6a11cb solid 2px;
+  }
+  input{
+    width: 80%;
+    height: 10%;
+  }
+  .a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  button:hover{
     background-color: yellow;
     color: yellow;
 }
@@ -21,4 +36,6 @@ p{
 }
 label{
   color: aliceblue;
+  width:  20px;
+  height: 20px;
 }

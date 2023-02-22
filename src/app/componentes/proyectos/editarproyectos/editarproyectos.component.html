@@ -1,26 +1,26 @@
 <div class="vh-100 gradient-custom">
 
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-        <div class="form-group">
-            <label for="nombre">nombre</label>
+        <div class="form-group a">
+            <label for="nombre">Nombre</label>
             <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="proLab.nombre" required>
         </div>
-        <div class="form-group">
-            <label for="descripcion">descripcion</label>
+        <div class="form-group a">
+            <label for="descripcion">Descripcion</label>
             <input type="text" class="form-control" id="descripcion" name="descripcion"
                 [(ngModel)]="proLab.descripcion">
         </div>
-        <div class="form-group">
-            <label for="tecnologias">tecnologias</label>
+        <div class="form-group a">
+            <label for="tecnologias">Tecnologías</label>
             <input type="text" class="form-control" id="tecnologias" name="tecnologias"
                 [(ngModel)]="proLab.tecnologias">
         </div>
-        <div class="form-group">
-            <label for="urlimagen">fecha fin</label>
+        <div class="form-group a">
+            <label for="urlimagen">Fecha fin</label>
             <input type="text" class="form-control" id="urlimagen" name="urlimagen" [(ngModel)]="proLab.urlimagen">
         </div>
         <button class="btn btn-primary">
-            Agregar Proyecto
+            Guardar cambios
         </button>
     </form>
 
