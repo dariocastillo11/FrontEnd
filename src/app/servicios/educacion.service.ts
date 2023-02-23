@@ -9,8 +9,8 @@ import { educacion } from '../model/educacion.model'
 })
 export class EducacionService {
  
- // URL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/educacion/';
- URL = 'http://localhost:8080/educacion/';
+ URL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/educacion/';
+ //URL = 'http://localhost:8080/educacion/';
 
   constructor(private httpClient: HttpClient) { }  
 //lista

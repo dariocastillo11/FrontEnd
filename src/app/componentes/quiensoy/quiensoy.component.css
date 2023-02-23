@@ -16,6 +16,9 @@ h1{
     max-height: 360px;
     min-width: 100px;
     max-width: auto;
+    border-color: #000000;
+    border-width: 3px;
+    border-style: solid;
 
 
 }

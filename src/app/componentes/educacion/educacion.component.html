@@ -1,13 +1,16 @@
-<div class="bg-info p-2 text-dark bg-opacity-10">
+<div class="gradient-custom">
     <div class="container">
         <div class="row d-flex justify-content-evenly">
             <div class="col-auto">
-                <a href='#acercade' id='Educacion'>
-                    <i class="bi bi-arrow-up-left-square-fill"></i>
-                </a>
+              
+                <button>
+                    <a  href='#acercade' id='Educacion'>
+                     <i class="bi bi-arrow-left-square"></i>
+                 </a> 
+                 </button>
             </div>
-            <div class="col-auto">
-                <h1>Educacion</h1>
+            <div class="col">
+                <h1 class="font-effect-shadow-multiple">Educacion</h1>
             </div>
             <div class="col-auto">
                 <button (click)="open(content)" *ngIf="isLogged"><i class="bi bi-plus-square"></i><ng-template #content
@@ -25,8 +28,8 @@
             <li class="list-group-item">
                 <div class="as">
                     <div class="col">
-                        <h1>{{edu.titulo}}</h1><br>
-                        <h2>{{edu.imagenestudio}}</h2><br>
+                        <h2>{{edu.titulo}}</h2><br>
+                        <h3>{{edu.imagenestudio}}</h3><br>
                         <!-- url va ser titulo y descripcion descripcion-->
                         <p>{{edu.inicio+" - "}}{{edu.fin}}</p>
                         <p>{{edu.descripcion}}</p>

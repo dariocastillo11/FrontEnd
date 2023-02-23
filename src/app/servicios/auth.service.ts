@@ -10,8 +10,8 @@ import { NuevoUsuario } from '../model/nuevo.usuario';
   providedIn: 'root'
 })
 export class AuthService {
- // authURL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/auth/';
-  authURL = 'http://localhost:8080/auth/';
+ authURL = 'https://neutral-shirleen-dariocastillo11.koyeb.app/auth/';
+  //authURL = 'http://localhost:8080/auth/';
     constructor(private httpClient: HttpClient) { }
   
    public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{

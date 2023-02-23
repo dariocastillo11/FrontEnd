@@ -1,13 +1,16 @@
-<div class="bg-primary p-2 text-dark bg-opacity-10">
+<div class="gradient-custom">
     <div class="container">
         <div class="row">
             <div class="col-auto">
-                <a href='#acercade' id='Experiencia'>
-                    <i class="bi bi-arrow-up-left-square-fill"></i>
-                </a>
+              
+                <button>
+                    <a href='#acercade' id='Experiencia'>
+                     <i class="bi bi-arrow-left-square"></i>
+                 </a> 
+                 </button>
             </div>
-            <div class="col-auto">
-                <h2>Experiencia</h2>
+            <div class="col">
+                <h1 class="font-effect-shadow-multiple">Experiencia</h1>
             </div>
             <div class="col-auto">
               
@@ -26,11 +29,11 @@
                 <a [href]="exp.urlempresa">
                     <img [src]='exp.urlimagenempresa' alt="servelec.srl" id="margenimagenes"> </a>
 
-                <h4>{{exp.nombreempresa}}</h4>
+                <h2>{{exp.nombreempresa}}</h2>
                 <p>{{exp.fechainicio+" - "}}{{exp.fechafin}}</p>
             </div>
             <div class="col">
-                <p >{{exp.descripcion}}</p>
+                <h3>{{exp.descripcion}}</h3>
                
             </div>
             <div class="col-auto">

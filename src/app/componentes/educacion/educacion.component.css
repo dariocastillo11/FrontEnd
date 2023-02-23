@@ -12,27 +12,21 @@ button:hover{
     text-align: center;
     contain:paint;
 }
-h1{
-    line-height: 0.9;
-    font-size: 0.5;
-    font-style:italic;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(70, 56, 162);
-    
-}
-h2{
-    line-height: 0.9;
-    font-size: 0.5;
 
-    font-family: 'Times New Roman';
-    color: rgb(77, 156, 195);
-    
+h2{
+   
+    font-size: 0.9cm;
+
+
+    color:white;
+
+}
+h3{
+    font-size: 0.7cm;
 }
 p{
-    line-height: 0.9;
-    font-size: 0.5;
-    font-style:italic;
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
+    font-size: 0.5cm;
+    color: white;
+ 
     
 }

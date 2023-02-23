@@ -11,3 +11,18 @@ button:hover{
     width:250px;
     height: 200px;
 }
+h2{
+   
+    font-size: 0.9cm;
+
+
+    color:white;
+
+}
+h3{
+    font-size: 0.7cm;
+}
+p{
+    font-size: 0.5cm;
+    
+}

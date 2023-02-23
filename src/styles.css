@@ -1,22 +1,42 @@
 
 *{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    */
+    font-family: Itim,cursive ;
     text-align: center;
-    
+         
 }
 
-h3{
-    color:rgb(33, 55, 202);
-}
+
 a:hover{
     background-color: rgb(246, 202, 107);
 }
 
 
-h2{
-    text-align: center;
 
-}
 .div{
     text-align: center;
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+   /* background: #670909;*/
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+   /* background: -webkit-linear-gradient(to right, rgb(32, 126, 232), rgb(142, 104, 177));*/
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(97, 136, 234), rgb(140, 211, 225));
+
+   /* background: -webkit-linear-gradient(to right, rgb(213, 78, 20), rgb(218, 218, 43));
+
+  background: linear-gradient(to right,rgb(220, 41, 25), rgb(224, 172, 29));
+*/
+} 
+
+h1{
+    font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  color: white;
+  
 }

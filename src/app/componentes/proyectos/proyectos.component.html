@@ -1,13 +1,16 @@
-<div class="bg-primary p-2 text-dark bg-opacity-10">
+<div class="gradient-custom">
     <div class="container">
         <div class="row d-flex justify-content-evenly">
             <div class="col-auto">
-                <a href='#acercade' id='Proyectos'>
-                    <i class="bi bi-arrow-up-left-square-fill"></i>
-                </a>
+                <button>
+                   <a href='#acercade' id='Proyectos'>
+                    <i class="bi bi-arrow-left-square"></i>
+                </a> 
+                </button>
+                
             </div>
-            <div class="col-auto">
-                <h2>Proyectos</h2>
+            <div class="col">
+                <h1 class="font-effect-shadow-multiple">Proyectos</h1>
             </div>
             <div class="col-auto">
                 <button (click)="open(content)" *ngIf="isLogged"><i class="bi bi-plus-square"></i><ng-template #content
@@ -24,11 +27,12 @@
 
 
                 <div class="col-auto">
+                    <h2>{{pro.nombre}}</h2>
                     <img [src]='pro.urlimagen' alt="imagen" width="70%" heigh="70%">
                 </div>
                 <div class="col-auto">
-                    <h4>{{pro.nombre}}</h4>
-                    <p>{{pro.tecnologias}}</p>
+                    
+                    <h3>{{pro.tecnologias}}</h3>
                     <p>{{pro.descripcion}}</p>
                 </div>
 
