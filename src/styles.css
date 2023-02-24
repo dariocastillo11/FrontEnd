@@ -4,9 +4,8 @@
     */
     font-family: Itim,cursive ;
     text-align: center;
-         
 }
-
+ 
 
 a:hover{
     background-color: rgb(246, 202, 107);
@@ -14,9 +13,6 @@ a:hover{
 
 
 
-.div{
-    text-align: center;
-}
 
 .gradient-custom {
     /* fallback for old browsers */
@@ -32,6 +28,8 @@ a:hover{
 
   background: linear-gradient(to right,rgb(220, 41, 25), rgb(224, 172, 29));
 */
+
+
 } 
 
 h1{

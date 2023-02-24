@@ -1,4 +1,4 @@
-<div class="gradient-custom">
+<br><div class="gradient-custom">
     <div class="container">
         <div class="row d-flex justify-content-evenly">
             <div class="col-auto">
@@ -28,12 +28,15 @@
 
                 <div class="col-auto">
                     <h2>{{pro.nombre}}</h2>
-                    <img [src]='pro.urlimagen' alt="imagen" width="70%" heigh="70%">
+                    <a [href]="pro.tecnologias">
+                        <img [src]='pro.urlimagen' alt="imagen" width="70%" heigh="70%">
+                    </a>
+                    
                 </div>
                 <div class="col-auto">
                     
-                    <h3>{{pro.tecnologias}}</h3>
-                    <p>{{pro.descripcion}}</p>
+                    <h3>{{pro.descripcion}}</h3>
+                    
                 </div>
 
                 <div class="col-auto">

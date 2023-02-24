@@ -1,4 +1,4 @@
-<div class="gradient-custom">
+<br><div class="gradient-custom">
     <div class="container">
         <div class="row">
             <div class="col-auto">
@@ -28,12 +28,13 @@
             <div class="row d-flex justify-content-evenly">
                 <div class="col-auto" style="min-width: 400px;">
                     <img [src]='per.urlfoto' alt="" class="fotoperfil">
-                    <p>{{per.fechanacimiento}}</p>
-                    <p>{{per.domicilio}}</p>
                 </div>
                 <div class="col">
                     <h2>{{per.nombre}}{{per.apellido}}</h2><br>
                     <h3>{{per.sobremi}}</h3>
+                    
+                        <a download="" class="hola" href="../../../assets/imagen/Darío Castillo. Curriculum Vitae.pdf" >DESCARGA MI CV</a>
+                    <br><br>
                 </div>
                 <div class="col-auto">
                     <button (click)="open(content, per.id)" *ngIf="isLogged"><i

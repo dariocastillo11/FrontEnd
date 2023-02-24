@@ -1,4 +1,4 @@
-<div class="gradient-custom">
+<br><div class="gradient-custom">
     <div class="container">
         <div class="row d-flex justify-content-evenly">
             <div class="col-auto">
@@ -10,7 +10,7 @@
                  </button>
             </div>
             <div class="col">
-                <h1 class="font-effect-shadow-multiple">Educacion</h1>
+                <h1 class="font-effect-shadow-multiple">Educación</h1>
             </div>
             <div class="col-auto">
                 <button (click)="open(content)" *ngIf="isLogged"><i class="bi bi-plus-square"></i><ng-template #content
@@ -25,9 +25,9 @@
 
     <div class="row">
         <ul class="list-group-horizontal col-auto" *ngFor="let edu of educacion">
-            <li class="list-group-item">
+
                 <div class="as">
-                    <div class="col">
+                    
                         <h2>{{edu.titulo}}</h2><br>
                         <h3>{{edu.imagenestudio}}</h3><br>
                         <!-- url va ser titulo y descripcion descripcion-->
@@ -42,11 +42,11 @@
                                 <app-editareducacion [ides]="edu.id"></app-editareducacion>
                             </ng-template></button>
                         <button (click)='delete(edu.id)' *ngIf="isLogged"><i class="bi bi-trash3"></i></button>
-                    </div>
+                    
 
                 </div>
 
-            </li>
+            
         </ul>
 
     </div>

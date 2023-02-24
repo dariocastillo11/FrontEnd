@@ -61,7 +61,6 @@ import { CopyrightComponent } from './componentes/copyright/copyright.component'
     SignupComponent,
     CopyrightComponent
     
-    
   ],
   imports: [
     BrowserModule,

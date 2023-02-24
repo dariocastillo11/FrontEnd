@@ -3,7 +3,7 @@
 button{
     width: 30px;
     height: 30px;
-
+  
 
 }
 button:hover{
@@ -11,9 +11,11 @@ button:hover{
     color: yellow;
 }
 .progress {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 2%;
+    
+    max-width: 800px;
+    margin-left: 30px;
+    margin-left: 30px;
+
 }
 
 .imagen{
