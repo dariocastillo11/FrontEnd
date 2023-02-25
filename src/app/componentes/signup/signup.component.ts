@@ -45,8 +45,8 @@ export class SignupComponent implements OnInit {
   onSignUp():void{
     this.user = new NuevoUsuario(this.name, this.nombreUsuario, this.email, this.password);
     this.authService.nuevo(this.user).subscribe(data =>{
-      this.router.navigate([""]);
-        //window.location.reload();
+      //this.router.navigate([""]);
+        window.location.reload();
 
         alert("Usuario creado con exito");
       }, err =>{
