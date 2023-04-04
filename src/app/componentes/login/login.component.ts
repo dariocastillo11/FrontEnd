@@ -5,8 +5,6 @@ import { Route, Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { TokenService } from 'src/app/servicios/token.service';
-import { EncabezadoComponent } from '../encabezado/encabezado.component';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -21,12 +19,8 @@ nombreUsuario!:string;
 password!:string;
 roles:string[] = [];
 errMsj!:string;
-
-encabezado: EncabezadoComponent;
- 
-  submitted: boolean;
-  registerForm: any;
-constructor(private tokenService: TokenService,private authService:AuthService,private router:Router, private formBuilder: FormBuilder,private modalService: NgbModal){
+//form: FormGroup;
+constructor(private tokenService: TokenService,private authService:AuthService,private router:Router, private formBuilder: FormBuilder){
   //this.form= this.formBuilder.group({
     
   //  password:['',[Validators.required, Validators.minLength(4)]],
@@ -42,7 +36,6 @@ constructor(private tokenService: TokenService,private authService:AuthService,p
     }
 }
 onLogin():void{
-
     this.loginUsuario=new LoginUsuario(this.nombreUsuario, this.password);
     this.authService.login(this.loginUsuario).subscribe(data =>{
     this.isLogged=true;
@@ -50,9 +43,9 @@ onLogin():void{
     this.tokenService.setToken(data.token);
     this.tokenService.setUserName(data.nombreUsuario);
     this.tokenService.setAuthorities(data.authorities);
-  // this.router.navigate(['']);
-    window.location.reload();
-}, err =>{
+    this.router.navigate(['']);
+
+  }, err =>{
     this.isLogged=false;
     this.isLogginFail=true;
     this.errMsj= err.error.mensaje;
@@ -60,29 +53,6 @@ onLogin():void{
   }
   )
 
-}
-
-
-
-modal : NgbModalRef;
-
-open(content: any) {
-  this.modal = this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' })    
-  this.modal.result.then((e) => {
-      console.log("dialogo cerrado")
-  });        
-}
-
-cerrar() {
-  this.modal.close();
-}
-
-onSubmit() {
-  this.submitted = true;
-  if (this.registerForm.invalid) {
-    return;
-  }
-  alert('SUCCESS!! :-)');
 }
 
 

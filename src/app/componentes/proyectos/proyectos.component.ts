@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { proyectos } from 'src/app/model/proyectos.model';
 import { TokenService } from 'src/app/servicios/token.service';
 import { ProyectosService } from 'src/app/servicios/proyectos.service';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-proyectos',
@@ -12,10 +10,8 @@ import { Router } from '@angular/router';
 })
 export class ProyectosComponent implements OnInit{
   proyectos: proyectos[] = [];
-  submitted: boolean;
-  registerForm: any;
 
-  constructor(private ProyectosService: ProyectosService, private tokenService: TokenService,private modalService: NgbModal, router: Router){}
+  constructor(private ProyectosService: ProyectosService, private tokenService: TokenService){}
 isLogged=false;
 
 
@@ -55,29 +51,6 @@ isLogged=false;
 
   }
 
-
-  modal : NgbModalRef;
-
-  open(content: any, id?:number) {
-    this.modal = this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' })
-    
-    this.modal.result.then((e) => {
-        console.log("dialogo cerrado")
-    });        
-  }
-
-  cerrar() {
-    this.modal.close();
-  }
-
-
-  onSubmit() {
-    this.submitted = true;
-    if (this.registerForm.invalid) {
-      return;
-    }
-    alert('SUCCESS!! :-)');
-  }
 
 }
 

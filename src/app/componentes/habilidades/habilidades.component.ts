@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { habilidades } from 'src/app/model/habilidades.model';
 import { TokenService } from 'src/app/servicios/token.service';
 import { HabilidadesService } from 'src/app/servicios/habilidades.service';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-habilidades',
@@ -11,11 +9,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit{
-  habilidades: habilidades[] = [];
-  submitted: boolean;
-  registerForm: any;
 
-  constructor(private HabilidadesService: HabilidadesService, private tokenService: TokenService,private modalService: NgbModal, router: Router){}
+  habilidades: habilidades[] = [];
+
+  constructor(private HabilidadesService: HabilidadesService, private tokenService: TokenService){}
 isLogged=false;
 
 
@@ -54,28 +51,7 @@ isLogged=false;
     }
 
   }
-  modal : NgbModalRef;
 
-  open(content: any, id?:number) {
-    this.modal = this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' })
-    
-    this.modal.result.then((e) => {
-        console.log("dialogo cerrado")
-    });        
-  }
-
-  cerrar() {
-    this.modal.close();
-  }
-
-
-  onSubmit() {
-    this.submitted = true;
-    if (this.registerForm.invalid) {
-      return;
-    }
-    alert('SUCCESS!! :-)');
-  }
 
 }
 
