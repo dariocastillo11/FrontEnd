@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NuevoUsuario } from '../../model/nuevo.usuario';
 import { AuthService } from '../../servicios/auth.service';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -20,9 +19,6 @@ export class SignupComponent implements OnInit {
   name: string = '';
   user: NuevoUsuario;
   form:FormGroup;
-  registerForm: any;
-  modalService: any;
-  submitted: boolean;
   constructor(private formBuilder:FormBuilder, private authService:AuthService,private router:Router) { 
     this.form=this.formBuilder.group(
       {
@@ -45,10 +41,9 @@ export class SignupComponent implements OnInit {
   onSignUp():void{
     this.user = new NuevoUsuario(this.name, this.nombreUsuario, this.email, this.password);
     this.authService.nuevo(this.user).subscribe(data =>{
-      //this.router.navigate([""]);
-        window.location.reload();
-
+        //this.router.navigate([""]
         alert("Usuario creado con exito");
+        window.location.reload();
       }, err =>{
         console.log("falló");
       });
@@ -68,26 +63,7 @@ export class SignupComponent implements OnInit {
   
 }
 
-modal : NgbModalRef;
 
-open(content: any) {
-  this.modal = this.modalService.open(content, { centered: true, backdropClass: 'light-blue-backdrop' })    
-  this.modal.result.then((e) => {
-      console.log("dialogo cerrado")
-  });        
-}
-
-cerrar() {
-  this.modal.close();
-}
-
-onSubmit() {
-  this.submitted = true;
-  if (this.registerForm.invalid) {
-    return;
-  }
-  alert('SUCCESS!! :-)');
-}
 
 
 }
